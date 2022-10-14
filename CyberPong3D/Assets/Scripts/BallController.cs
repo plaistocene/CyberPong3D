@@ -11,7 +11,7 @@ public class BallController : MonoBehaviour
 
     private Vector3 _direction;
 
-    [SerializeField] private float minDirection = 0.2f;
+    [SerializeField] private float minDirection = 0.3f;
 
     #endregion
 

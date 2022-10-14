@@ -144,7 +144,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!135 &39783186
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 39783185}
-  _speed: 25
+  _speed: 15
   minDirection: 0.2
 --- !u!1 &303788973
 GameObject:
@@ -444,6 +444,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1505392277, guid: 8ba30c583e9114c27ba0c3ee746ab675, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4012289047597351893, guid: 8ba30c583e9114c27ba0c3ee746ab675,
         type: 3}
       propertyPath: m_Name
@@ -703,6 +707,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 797282507, guid: a24d2f7cf460541c99ea401ab475caa4, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 514592002245671958, guid: a24d2f7cf460541c99ea401ab475caa4,
         type: 3}
       propertyPath: m_Name
