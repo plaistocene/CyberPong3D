@@ -88,7 +88,6 @@ public class BallController : MonoBehaviour
     {
         StopBallMovement();
         transform.position = _defaultBallPosition;
-        StartBallMovement();
     }
 
     #endregion
