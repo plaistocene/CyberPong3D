@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 857191783626530750}
   - component: {fileID: 797282507}
   - component: {fileID: 3681906035510483318}
+  - component: {fileID: 4566879651273324751}
   m_Layer: 0
   m_Name: PlayerTwo
   m_TagString: Racket
@@ -117,6 +118,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.94907135, z: 5.8355474}
   m_Center: {x: 8.2219265e-17, y: -0.025464326, z: 0}
+--- !u!114 &4566879651273324751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514592002245671958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12f39764114f74ef7bc6d04a410bbb81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _racketRigidbody: {fileID: 797282507}
+  _ballTransform: {fileID: 0}
+  _playerSpeed: 300
+  _aiSpeed: 400
+  _offset: 0.2
+  _up: 273
+  _down: 274
+  _isPlayer: 0
 --- !u!1 &927366758920377443
 GameObject:
   m_ObjectHideFlags: 0
