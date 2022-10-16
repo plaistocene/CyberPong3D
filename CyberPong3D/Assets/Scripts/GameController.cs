@@ -1,26 +1,22 @@
+using TMPro;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
     #region Variables
 
-    [SerializeField] private int _scoreLeft = 0;
-    [SerializeField] private int _scoreRight = 0;
-    
+    // UI Text elements
+    [SerializeField] private TextMeshProUGUI _leftScoreText;
+    [SerializeField] private TextMeshProUGUI _rightScoreText;
+
+    // Keeping the scores
+    private int _scoreLeft = 0;
+    private int _scoreRight = 0;
+
     #endregion
 
     #region Unity Functions
-    
-    private void Start()
-    {
-        
-    }
 
-    private void Update()
-    {
-                
-    }
-    
     #endregion
 
     #region Custom Functions
@@ -29,13 +25,21 @@ public class GameController : MonoBehaviour
     {
         Debug.Log("Right Scored!!!1");
         _scoreRight++;
+        UpdateUI();
     }
 
     public void LeftScored()
     {
         Debug.Log("Left Scored!!!");
         _scoreLeft++;
+        UpdateUI();
     }
-    
+
+    private void UpdateUI()
+    {
+        _leftScoreText.text = _scoreLeft.ToString();
+        _rightScoreText.text = _scoreRight.ToString();
+    }
+
     #endregion
 }
