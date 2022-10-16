@@ -5,7 +5,7 @@ public class GoalController : MonoBehaviour
 {
     #region Variables
 
-    public UnityEvent onTriggerEnter;
+    public UnityEvent onTriggerEnterUnityEvent;
 
     #endregion
 
@@ -15,7 +15,7 @@ public class GoalController : MonoBehaviour
     {
         if (other.CompareTag("Ball"))
         {
-            onTriggerEnter.Invoke();
+            onTriggerEnterUnityEvent.Invoke();
         }
     }
 
