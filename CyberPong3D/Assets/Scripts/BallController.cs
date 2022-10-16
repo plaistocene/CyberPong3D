@@ -24,6 +24,9 @@ public class BallController : MonoBehaviour
     // default location for ball
     private Vector3 _defaultBallPosition;
 
+    // for vfx spark
+    [SerializeField] private GameObject _sparkVFXGO;
+
     #endregion
 
     #region Unity Functions
@@ -42,9 +45,12 @@ public class BallController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        bool hit = false;
+
         if (other.CompareTag("Wall"))
         {
             _direction.z = -_direction.z;
+            hit = true;
         }
 
         if (other.CompareTag("Racket"))
@@ -58,6 +64,14 @@ public class BallController : MonoBehaviour
             newDirection.z = Mathf.Sign(zValue) * Mathf.Max(Mathf.Abs(zValue), minDirection);
 
             _direction = newDirection;
+
+            hit = true;
+        }
+
+        if (hit)
+        {
+            GameObject sparkGO = Instantiate(_sparkVFXGO, transform.position, transform.rotation);
+            Destroy(sparkGO, 2f);
         }
     }
 
